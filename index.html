@@ -1,0 +1,32 @@
+```javascript
+// Corrected tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"], // Ensure correct paths
+  theme: {
+    extend: {
+      colors: {
+        'custom-color': '#007bff', //Example Custom Color
+      },
+      fontFamily: {
+        'sans': ['Roboto', 'sans-serif'], //Example font family
+      }
+    },
+  },
+  plugins: [],
+}
+```
+```html
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tailwind Example</title>
+    <link href="/output.css" rel="stylesheet">
+  </head>
+  <body class="bg-gray-100">
+    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <div class="text-custom-color">Custom Color Example</div>
+  </body>
+</html>
+```
